@@ -1,8 +1,6 @@
 <section class="product">
-  <div class="p-4">
     <h5 class="product__title">{{ .Get "title" }}</h5>
     <span class="product__price">{{ .Get "price" }}</span>
-    <hr>
     <!-- <ul class="product__features">
       {{- range (seq 0 (sub (len .Params) 1) ) }}
         <li>
@@ -14,5 +12,4 @@
     <div class="product__description">
       {{ .Inner | markdownify }}
     </div>
-  </div>
 </section>
