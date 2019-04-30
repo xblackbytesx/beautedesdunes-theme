@@ -1,3 +1,6 @@
-{{ if .Site.Params.favicon }}
-<link rel="shortcut icon" href="/{{ .Site.Params.favicon }}" type="image/x-icon" />
+{{ $favicon := .Site.Params.favicon}}
+
+{{ if $favicon }}
+  {{ $favicon := (trim $favicon "/") | absURL }}
+  <link rel="shortcut icon" href="{{ $favicon }}" type="image/x-icon" />
 {{ end }}
