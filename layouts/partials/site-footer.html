@@ -1,16 +1,28 @@
+{{ $footer_image1 := .Site.Params.footer.image1 }}
+{{ $footer_image1 := (trim $footer_image1 "/") | absURL }}
+
+{{ $footer_image2 := .Site.Params.footer.image2 }}
+{{ $footer_image2 := (trim $footer_image2 "/") | absURL }}
+
+{{ $footer_image3 := .Site.Params.footer.image3 }}
+{{ $footer_image3 := (trim $footer_image3 "/") | absURL }}
+
+{{ $footer_image4 := .Site.Params.footer.image4 }}
+{{ $footer_image4 := (trim $footer_image4 "/") | absURL }}
+
 <footer class="footer" role="contentinfo">
   <div class="footer__top">
     <figure>
-      <img src="{{ .Site.Params.footer.image1 }}" alt="" />
+      <img src="{{ $footer_image1 }}" alt="" />
     </figure>
     <figure>
-      <img src="{{ .Site.Params.footer.image2 }}" alt="" />
+      <img src="{{ $footer_image2 }}" alt="" />
     </figure>
     <figure>
-      <img src="{{ .Site.Params.footer.image3 }}" alt="" />
+      <img src="{{ $footer_image3 }}" alt="" />
     </figure>
     <figure>
-      <img src="{{ .Site.Params.footer.image4 }}" alt="" />
+      <img src="{{ $footer_image4 }}" alt="" />
     </figure>
   </div>
   <div class="footer__bottom flex justify-between">
