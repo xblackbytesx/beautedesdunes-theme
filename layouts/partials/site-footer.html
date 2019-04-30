@@ -1,8 +1,22 @@
-<footer class="{{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}" >
-    &copy; {{ now.Format "2006" }} {{ .Site.Title }}
-  </a>
+<footer class="footer" role="contentinfo">
+  <div class="footer__top">
+    <figure>
+      <img src="{{ .Site.Params.footer.image1 }}" alt="" />
+    </figure>
+    <figure>
+      <img src="{{ .Site.Params.footer.image2 }}" alt="" />
+    </figure>
+    <figure>
+      <img src="{{ .Site.Params.footer.image3 }}" alt="" />
+    </figure>
+    <figure>
+      <img src="{{ .Site.Params.footer.image4 }}" alt="" />
+    </figure>
+  </div>
+  <div class="footer__bottom flex justify-between">
+    <a class="footer__copyright f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}" >
+      &copy; {{ now.Format "2006" }} {{ .Site.Title }}
+    </a>
     <div>{{ partial "social-follow.html" . }}</div>
   </div>
 </footer>
