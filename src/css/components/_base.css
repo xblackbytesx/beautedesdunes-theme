@@ -32,6 +32,7 @@ h1 {
 
 a {
   text-decoration: none;
+  outline: 0;
 }
 
 a,
@@ -39,6 +40,14 @@ p,
 table {
   font-size: 2em;
   line-height: 1.5em;
+}
+
+table {
+  width: 100%;
+}
+
+iframe {
+  max-width: 100%;
 }
 
 .video-wrapper {
