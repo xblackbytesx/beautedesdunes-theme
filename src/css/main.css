@@ -45,11 +45,44 @@ p {
   h1,
   h2 {
     color: #FFF;
+    font-weight: 200;
+  }
+
+  h2 {
+    font-family: 'Roboto', sans-serif;
   }
 
   &__nav {
     position: relative;
+    padding: 1.6rem;
     z-index: 10;
+
+    nav {
+      display: flex;
+      flex-flow: row wrap;
+      align-content: space-between;
+
+      > a {
+        flex: 1 1 auto;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin-right: 1.6rem;
+      }
+
+      a {
+        font-size: 2em;
+        color: #FFF;
+        text-decoration: none;
+      }
+    }
   }
 
   &__content {
@@ -87,6 +120,10 @@ p {
     h1 {
       font-size: 4.8em;
     }
+
+    h2 {
+      font-size: 1.6em;
+    }
   }
 }
 
@@ -97,5 +134,40 @@ main {
 
   h1 {
     font-size: 4em;
+  }
+}
+
+
+.footer {
+  &__top {
+    display: flex;
+    margin: 0 auto;
+    max-width: 110rem;
+    align-content: space-between;
+    flex-flow: row wrap;
+    padding: 8px;
+
+    figure {
+      margin: 0;
+      flex: 0 1 25%;
+      text-align: center;
+      padding: 8px;
+    }
+
+    img {
+      border: 2px solid #000;
+    }
+  }
+
+  &__bottom {
+    background-color: #32A2B8;
+    padding: 16px;
+  }
+}
+
+/* Social */
+.link-transition {
+  .new-window {
+    display: none;
   }
 }

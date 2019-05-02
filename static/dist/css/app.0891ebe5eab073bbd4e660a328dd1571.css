@@ -401,12 +401,53 @@ p {
 .header h1,
   .header h2 {
     color: #FFF;
+    font-weight: 200;
+  }
+
+.header h2 {
+    font-family: 'Roboto', sans-serif;
   }
 
 .header__nav {
     position: relative;
+    padding: 1.6rem;
     z-index: 10;
   }
+
+.header__nav nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      -ms-flex-line-pack: justify;
+          align-content: space-between;
+    }
+
+.header__nav nav > a {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+      }
+
+.header__nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+.header__nav ul li {
+        display: inline-block;
+        margin-right: 1.6rem;
+      }
+
+.header__nav ul a {
+        font-size: 2em;
+        color: #FFF;
+        text-decoration: none;
+      }
 
 .header__content {
     position: relative;
@@ -441,6 +482,10 @@ p {
       font-size: 4.8em;
     }
 
+.header--small h2 {
+      font-size: 1.6em;
+    }
+
 main {
   margin: 0 auto;
   padding: 1.6rem 2.4rem 25.6rem 2.4rem;
@@ -449,4 +494,43 @@ main {
 
 main h1 {
     font-size: 4em;
+  }
+
+.footer__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    max-width: 110rem;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    padding: 8px;
+  }
+
+.footer__top figure {
+      margin: 0;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 1 25%;
+              flex: 0 1 25%;
+      text-align: center;
+      padding: 8px;
+    }
+
+.footer__top img {
+      border: 2px solid #000;
+    }
+
+.footer__bottom {
+    background-color: #32A2B8;
+    padding: 16px;
+  }
+
+/* Social */
+
+.link-transition .new-window {
+    display: none;
   }
