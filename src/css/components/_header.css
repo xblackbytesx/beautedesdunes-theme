@@ -1,0 +1,160 @@
+.header {
+  position: relative;
+  background-size: cover;
+  color: #FFF;
+
+  h1,
+  h2 {
+    color: #FFF;
+    font-weight: 200;
+  }
+
+  h2 {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  &__nav {
+    position: relative;
+    padding: 1.6rem;
+    z-index: 10;
+
+    nav {
+      display: flex;
+      flex-flow: row wrap;
+      align-content: space-between;
+
+      > a {
+        flex: 1 1 100%;
+
+        figure {
+          margin: 0 auto 3.2rem auto;
+        }
+      }
+
+      > div {
+        flex: 1 1 100%;
+        align-self: center;
+        text-align: center;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin-right: 1.6rem;
+      }
+
+      a {
+        font-size: 2em;
+        color: #FFF;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 0;
+  }
+
+  &--large {
+    h1 {
+      font-size: 3.6em;
+    }
+
+    h2 {
+      font-size: 1.6em;
+    }
+
+    nav figure {
+      display: none;
+    }
+
+    .header__content {
+      padding: 2rem 3.2rem;
+    }
+  }
+
+  &--small {
+    h1 {
+      font-size: 4.8em;
+    }
+
+    h2 {
+      font-size: 1.6em;
+    }
+
+    .header__content {
+      padding: 3.2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .header {
+    &__nav {
+      nav {
+        > a {
+          flex: 1 1 auto;
+
+          figure {
+            margin: 0;
+          }
+        }
+
+        > div {
+          flex: 1 1 auto;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 76.8rem) {
+  .header {
+    &--large {
+      h1 {
+        font-size: 8em;
+      }
+
+      h2 {
+        font-size: 2.4em;
+      }
+
+      nav figure {
+        display: none;
+      }
+
+      .header__content {
+        padding: 8rem 3.2rem;
+      }
+    }
+
+    &--small {
+      h1 {
+        font-size: 4.8em;
+      }
+
+      h2 {
+        font-size: 1.6em;
+      }
+    }
+  }
+}

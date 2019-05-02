@@ -11,24 +11,26 @@
 {{ $footer_image4 := (trim $footer_image4 "/") | absURL }}
 
 <footer class="footer" role="contentinfo">
-  <div class="footer__top">
-    <figure>
-      <img src="{{ $footer_image1 }}" alt="" />
-    </figure>
-    <figure>
-      <img src="{{ $footer_image2 }}" alt="" />
-    </figure>
-    <figure>
-      <img src="{{ $footer_image3 }}" alt="" />
-    </figure>
-    <figure>
-      <img src="{{ $footer_image4 }}" alt="" />
-    </figure>
-  </div>
-  <div class="footer__bottom flex justify-between">
-    <a class="footer__copyright f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}" >
-      &copy; {{ now.Format "2006" }} {{ .Site.Title }}
-    </a>
-    <div>{{ partial "social-follow.html" . }}</div>
+  <div class="footer__wrapper">
+    <div class="footer__top">
+      <figure>
+        <img src="{{ $footer_image1 }}" alt="" />
+      </figure>
+      <figure>
+        <img src="{{ $footer_image2 }}" alt="" />
+      </figure>
+      <figure>
+        <img src="{{ $footer_image3 }}" alt="" />
+      </figure>
+      <figure>
+        <img src="{{ $footer_image4 }}" alt="" />
+      </figure>
+    </div>
+    <div class="footer__bottom flex justify-between">
+      <a class="footer__copyright f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}" >
+        &copy; {{ now.Format "2006" }} {{ .Site.Title }}
+      </a>
+      <div>{{ partial "social-follow.html" . }}</div>
+    </div>
   </div>
 </footer>

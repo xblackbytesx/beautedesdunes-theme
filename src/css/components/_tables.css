@@ -1,0 +1,45 @@
+table {
+  padding: 0;
+  border-spacing: inherit;
+  border: 1px solid #DDD;
+  border-radius: 6px;
+
+  tr {
+    border-top: 1px solid #DDD;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+
+    &:nth-child(2n) {
+      background-color: #f8f8f8;
+    }
+
+    th {
+      background-color: #DDD;
+      font-weight: bold;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    td {
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+    }
+
+    td:first-child,
+    th:first-child {
+      margin-top: 0;
+    }
+
+    td:last-child,
+    th:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

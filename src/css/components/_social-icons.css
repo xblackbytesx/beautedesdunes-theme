@@ -1,4 +1,12 @@
-.facebook, .twitter, .instagram, .youtube, .github, .gitlab, .linkedin, .medium, .mastodon {
+.facebook,
+.twitter,
+.instagram,
+.youtube,
+.github,
+.gitlab,
+.linkedin,
+.medium,
+.mastodon {
   fill: #BABABA;
 }
 
@@ -7,6 +15,7 @@
   display: inline-block;
   vertical-align: top;
 }
+
 .link-transition:hover .new-window{
   opacity: 1;
 }

@@ -1,0 +1,30 @@
+.footer {
+  &__top {
+    display: flex;
+    margin: 0 auto;
+    max-width: 76.8rem;
+    align-content: space-between;
+    flex-flow: row wrap;
+    padding: 8px;
+
+    figure {
+      margin: 0;
+      flex: 0 1 25%;
+      text-align: center;
+      padding: 8px;
+    }
+
+    img {
+      border: 2px solid #000;
+    }
+  }
+
+  &__bottom {
+    background-color: #32A2B8;
+    padding: 16px;
+
+    a {
+      color: #FFF;
+    }
+  }
+}

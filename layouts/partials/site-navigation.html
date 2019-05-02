@@ -1,22 +1,22 @@
 {{ $logo := .Site.Params.logo }}
 
-<nav role="navigation">
-  <a href="{{ .Site.BaseURL }}" class="f3 fw2 hover-white no-underline white-90 dib">
+<nav class="main-nav" role="navigation">
+  <a href="{{ .Site.BaseURL }}" class="main-nav__home">
     {{ if $logo }}
         {{ $logo := (trim $logo "/") | absURL }}
-        <figure class="main-logo">
+        <figure class="main-nav__logo">
           <img src="{{ $logo }}" alt="{{ .Site.Title }}" />
         </figure>
     {{ else }}
       {{ .Site.Title }}
     {{ end }}
   </a>
-  <div class="flex-l items-center">
+  <div class="main-nav__items">
     {{ partial "i18nlist.html" . }}
     {{ if .Site.Menus.main }}
-      <ul class="pl0 mr3">
+      <ul>
         {{ range .Site.Menus.main }}
-        <li class="list f5 f4-ns fw4 dib pr3">
+        <li>
           <a class="hover-white no-underline white-90" href="{{ .URL }}" title="{{ .Name }} page">
             {{ .Name }}
           </a>
