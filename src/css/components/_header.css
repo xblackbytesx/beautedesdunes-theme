@@ -83,13 +83,12 @@
       font-size: 1.6em;
     }
 
-    nav figure {
-      /* display: none; */
-      visibility: hidden;
-    }
-
     .header__content {
       padding: 2rem var(--gutter-double);
+
+      img {
+        display: none;
+      }
     }
   }
 
@@ -147,6 +146,14 @@
 
       .header__content {
         padding: 8rem var(--gutter-double);
+
+        img {
+          display: inline-block;
+        }
+      }
+
+      nav figure {
+        visibility: hidden;
       }
     }
 
