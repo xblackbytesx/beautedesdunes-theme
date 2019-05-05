@@ -16,7 +16,7 @@
 
   &__nav {
     position: relative;
-    padding: 1.6rem;
+    padding: var(--gutter);
     z-index: 10;
 
     nav {
@@ -28,7 +28,7 @@
         flex: 1 1 100%;
 
         figure {
-          margin: 0 auto 3.2rem auto;
+          margin: 0 auto var(--gutter-double) auto;
         }
       }
 
@@ -46,7 +46,7 @@
 
       li {
         display: inline-block;
-        margin-right: 1.6rem;
+        margin-right: var(--gutter);
       }
 
       a {
@@ -84,11 +84,12 @@
     }
 
     nav figure {
-      display: none;
+      /* display: none; */
+      visibility: hidden;
     }
 
     .header__content {
-      padding: 2rem 3.2rem;
+      padding: 2rem var(--gutter-double);
     }
   }
 
@@ -102,7 +103,7 @@
     }
 
     .header__content {
-      padding: 3.2rem;
+      padding: var(--gutter-double);
     }
   }
 }
@@ -140,11 +141,12 @@
       }
 
       nav figure {
-        display: none;
+        /* display: none; */
+        visibility: hidden;
       }
 
       .header__content {
-        padding: 8rem 3.2rem;
+        padding: 8rem var(--gutter-double);
       }
     }
 

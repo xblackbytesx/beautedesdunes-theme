@@ -17,8 +17,8 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #555;
-  background-color: #F4F4F4;
+  color: var(--grey);
+  background-color: var(--offwhite);
 }
 
 img {
@@ -27,15 +27,15 @@ img {
 
 h1 {
   font-family: 'Raleway', sans-serif;
-  color: #32A2B8;
+  color: var(--brand-primary);
 }
 
 a {
   text-decoration: none;
   outline: 0;
+  color: var(--brand-primary);
 }
 
-a,
 p,
 table {
   font-size: 2em;
@@ -48,6 +48,12 @@ table {
 
 iframe {
   max-width: 100%;
+}
+
+hr {
+  display: block; height: 1px;
+  border: 0; border-top: 1px solid var(--brand-primary);
+  margin: 1em 0; padding: 0;
 }
 
 .video-wrapper {
@@ -67,11 +73,15 @@ iframe {
 
 .main-content {
   margin: 0 auto;
-  padding: 1.6rem 2.4rem 25.6rem 2.4rem;
+  padding: var(--gutter) 2.4rem 25.6rem 2.4rem;
   max-width: 110rem;
 
   h1 {
     font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2.4em;
   }
 
   &__wrapper {

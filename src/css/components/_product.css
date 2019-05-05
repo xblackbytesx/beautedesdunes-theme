@@ -17,26 +17,26 @@
     li {
       position: relative;
       padding-left: 2.5rem;
-      margin-bottom: .8rem;
+      margin-bottom: var(--gutter-half);
 
       &::before {
         position: absolute;
         left: 0;
         content: '\2605';
-        color: #32A2B8;
+        color: var(--brand-primary);
       }
     }
   }
 
   &__title {
-    padding: 1.6rem;
+    padding: var(--gutter);
     margin: 0;
     background: #DDD;
   }
 
   &__description {
     background-color: #FFF;
-    padding: 1.6rem;
+    padding: var(--gutter);
   }
 
   &__price {
@@ -44,7 +44,7 @@
     top: -.1rem;
     right: -.1rem;
     padding: 1.4rem;
-    background-color: #32A2B8;
+    background-color: var(--brand-primary);
     color: #FFF;
     text-align: center;
     font-weight: bold;

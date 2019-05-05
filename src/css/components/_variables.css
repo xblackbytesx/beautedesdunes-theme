@@ -1,0 +1,11 @@
+:root {
+  --white: #fff;
+  --grey: #555;
+  --yellow: #ffad15;
+  --offwhite: #F4F4F4;
+  --brand-primary: #32A2B8;
+
+  --gutter: 1.6rem;
+  --gutter-half: .8rem;
+  --gutter-double: 3.2rem;
+}

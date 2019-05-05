@@ -5,13 +5,13 @@
     max-width: 76.8rem;
     align-content: space-between;
     flex-flow: row wrap;
-    padding: 8px;
+    padding: var(--gutter-half);
 
     figure {
       margin: 0;
       flex: 0 1 25%;
       text-align: center;
-      padding: 8px;
+      padding: var(--gutter-half);
     }
 
     img {
@@ -20,8 +20,9 @@
   }
 
   &__bottom {
-    background-color: #32A2B8;
-    padding: 16px;
+    font-size: 2em;
+    background-color: var(--brand-primary);
+    padding: var(--gutter);
 
     a {
       color: #FFF;

@@ -1,4 +1,5 @@
 @import 'normalize.css/normalize.css';
+@import 'components/_variables';
 @import 'components/_base';
 @import 'components/_header';
 @import 'components/_tables';
