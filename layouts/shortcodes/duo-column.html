@@ -1,9 +1,8 @@
 <section class="duo-column">
-    <div class="duo-column__image">
+    <figure class="duo-column__image">
       <img src="{{ relURL ($.Site.BaseURL) }}{{ .Get "image" }}" alt="{{ .Get "alt" }}" />
-    </div>
+    </figure>
     <div class="duo-column__description">
-      <h5 class="duo-column__title">{{ .Get "title" }}</h5>
-      <p>{{ .Inner | markdownify }}</p>
+      {{ .Inner | markdownify }}
     </div>
 </section>

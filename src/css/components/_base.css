@@ -84,6 +84,18 @@ hr {
     font-size: 2.4em;
   }
 
+  h3 {
+    font-size: 2em;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  ul {
+    font-size: 2em;
+  }
+
   &__wrapper {
     margin: 0 auto;
     max-width: 76.8rem;

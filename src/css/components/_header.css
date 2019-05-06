@@ -29,6 +29,7 @@
 
         figure {
           margin: 0 auto var(--gutter-double) auto;
+          max-width: 200px;
         }
       }
 

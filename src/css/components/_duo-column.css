@@ -1,0 +1,23 @@
+.duo-column {
+  display: flex;
+  margin-bottom: var(--gutter);
+  border-bottom: 1px solid var(--brand-primary);
+
+  &__image {
+    flex: 1 0 25%;
+    margin: 0;
+    padding: 0;
+    max-width: inherit;
+  }
+
+  &__description {
+    flex: 1 1 auto;
+    padding: 0 var(--gutter);
+    margin-top: -.6rem;
+
+    p {
+      font-size: 1.6em;
+      margin: 0 0 var(--gutter) 0;
+    }
+  }
+}
