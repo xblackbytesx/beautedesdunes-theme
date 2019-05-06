@@ -28,4 +28,14 @@
       color: #FFF;
     }
   }
+
+  &__copyright::after {
+    display: inline-block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url('/images/star-white.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

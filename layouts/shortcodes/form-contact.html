@@ -1,20 +1,25 @@
-{{ $.Scratch.Add "labelClasses" "f6 b db mb1 mt3 sans-serif mid-gray" }}
-{{ $.Scratch.Add "inputClasses" "w-100 f5 pv3 ph3 bg-light-gray bn" }}
-
-<form class="black-80 sans-serif" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST" role="form">
-
-    <label class="{{ $.Scratch.Get "labelClasses" }}"  for="name">{{ .Get "nameLabel" }}</label>
-    <input type="text" id="name" name="name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="name"/>
-
-    <label class="{{ $.Scratch.Get "labelClasses" }}" for="email">{{ .Get "emailLabel" }}</label>
-    <input type="email" id="email" name="email" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="email"/>
-    <div class="requirements f6 gray glow i ph3 overflow-hidden">
-      {{ .Get "emailRequiredMessage" }}
-    </div>
-
-    <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">{{ .Get "messageLabel" }}</label>
-    <textarea id="message" name="message" class="{{ $.Scratch.Get "inputClasses" }} h4" aria-labelledby="message"></textarea>
-
-    <input class="db w-100 mv2 white pa3 bn hover-shadow hover-bg-blck bg-animate bg-black" type="submit" value="{{ .Get "sendValue" }}" />
-
-</form>
+<section class="contact-form">
+  <h1 class="visuallyhidden">Contactformulier</h1>
+  <form action="{{ .Get "action" }}" method="POST" enctype="text/plain" role="form">
+    <fieldset>
+      <div>
+        <label for="contact-name">{{ .Get "nameLabel" }}</label>
+        <input type="text" name="name" id="contact-name" autocomplete="off" required placeholder="" aria-labelledby="name"/ />
+      </div>
+      <div>
+        <label for="contact-email">{{ .Get "emailLabel" }}</label>
+        <input type="email" name="_replyto" id="contact-email" autocomplete="off" required placeholder="" aria-labelledby="email" />
+      </div>
+      <!-- <div class="requirements">
+        {{ .Get "emailRequiredMessage" }}
+      </div> -->
+      <div>
+        <label for="contact-message">{{ .Get "messageLabel" }}</label>
+        <textarea name="body" id="contact-message" aria-labelledby="message"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="{{ .Get "sendValue" }}" />
+      </div>
+    </fieldset>
+  </form>
+</section>
