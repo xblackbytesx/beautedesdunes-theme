@@ -1,7 +1,9 @@
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var webpack = require('webpack');
-var AssetsPlugin = require('assets-webpack-plugin');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+const AssetsPlugin = require('assets-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// var UglifyJsPlugin = require('assets-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -20,12 +22,17 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					fallback: 'style-loader',
-					use: 'css-loader?importLoaders=1!postcss-loader'
-				})
-			}
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development',
+            },
+          },
+          'css-loader',
+        ],
+      }
 		]
 	},
 
@@ -44,14 +51,12 @@ module.exports = {
 			path: path.join(__dirname, '../data'),
 			prettyPrint: true
 		}),
-		new ExtractTextPlugin({
+		new MiniCssExtractPlugin({
 			filename: getPath => {
 				return getPath('css/[name].[contenthash].css');
 			},
-			allChunks: true
+			chunkFilename: '[id].css',
 		})
 	],
-	watchOptions: {
-		watch: true
-	}
+	watchOptions: {}
 };
