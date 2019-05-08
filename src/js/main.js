@@ -1,5 +1,9 @@
 import styles from './../css/main.css';
+import LazyLoad from "vanilla-lazyload";
 
+var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy-image"
+});
 
 // NOTE: TO use Jquery, just call the modules you want
 // var $ = require('jquery/src/core');

@@ -1,3 +1,6 @@
+{{ $placeholder := "/images/ph-1x1.png" }}
+{{ $placeholder := (trim $placeholder "/") | absURL }}
+
 {{ $footer_image1 := .Site.Params.footer.image1 }}
 {{ $footer_image1 := (trim $footer_image1 "/") | absURL }}
 
@@ -14,16 +17,16 @@
   <div class="footer__wrapper">
     <div class="footer__top">
       <figure>
-        <img src="{{ $footer_image1 }}" alt="" />
+        <img src="{{ $placeholder }}" data-src="{{ $footer_image1 }}" class="lazy-image" alt="" />
       </figure>
       <figure>
-        <img src="{{ $footer_image2 }}" alt="" />
+        <img src="{{ $placeholder }}" data-src="{{ $footer_image2 }}" class="lazy-image" alt="" />
       </figure>
       <figure>
-        <img src="{{ $footer_image3 }}" alt="" />
+        <img src="{{ $placeholder }}" data-src="{{ $footer_image3 }}" class="lazy-image" alt="" />
       </figure>
       <figure>
-        <img src="{{ $footer_image4 }}" alt="" />
+        <img src="{{ $placeholder }}" data-src="{{ $footer_image4 }}" class="lazy-image" alt="" />
       </figure>
     </div>
     <div class="footer__bottom flex justify-between">
