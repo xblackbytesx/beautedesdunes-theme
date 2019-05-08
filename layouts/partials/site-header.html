@@ -3,7 +3,7 @@
 {{ if $featured_image }}
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
   {{ $featured_image := (trim $featured_image "/") | absURL }}
-  <header class="header header--large" style="background-image: url('{{ $featured_image }}');">
+  <header class="header header--large lazy-image" data-bg="url({{ $featured_image }})">
     <div class="header__nav">
       {{ partialCached "site-navigation.html" .}}
     </div>
