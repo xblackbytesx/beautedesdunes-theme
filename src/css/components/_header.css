@@ -1,6 +1,7 @@
 .header {
   position: relative;
   background-size: cover;
+  background-position: center center;
   color: #FFF;
 
   h1,
