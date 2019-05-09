@@ -1,4 +1,4 @@
-@import '~normalize.css/normalize.css';
+@import 'normalize.css/normalize.css';
 @import 'components/_variables.css';
 @import 'components/_base.css';
 @import 'components/_header.css';

@@ -3,16 +3,16 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const AssetsPlugin = require('assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-var UglifyJsPlugin = require('assets-webpack-plugin');
+// var UglifyJsPlugin = require('assets-webpack-plugin');
 
 module.exports = {
 	mode: 'production',
 	entry: {
 		app: './js/main.js'
 	},
-	optimization: {
-		minimizer: [new UglifyJsPlugin()],
-	},
+	// optimization: {
+	// 	minimizer: [new UglifyJsPlugin()],
+	// },
 	module: {
 		rules: [
 			{
@@ -28,13 +28,9 @@ module.exports = {
 			{
         test: /\.css$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: process.env.NODE_ENV === 'development',
-            },
-          },
-          'css-loader',
+          'MiniCssExtractPlugin',
+					{ loader: 'css-loader', options: { importLoaders: 1 } },
+					'postcss-loader',
         ],
       }
 		]
