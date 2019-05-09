@@ -3,11 +3,15 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const AssetsPlugin = require('assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// var UglifyJsPlugin = require('assets-webpack-plugin');
+var UglifyJsPlugin = require('assets-webpack-plugin');
 
 module.exports = {
+	mode: 'production',
 	entry: {
 		app: './js/main.js'
+	},
+	optimization: {
+		minimizer: [new UglifyJsPlugin()],
 	},
 	module: {
 		rules: [
@@ -52,9 +56,7 @@ module.exports = {
 			prettyPrint: true
 		}),
 		new MiniCssExtractPlugin({
-			filename: getPath => {
-				return getPath('css/[name].[contenthash].css');
-			},
+			filename: '[name].css',
 			chunkFilename: '[id].css',
 		})
 	],
