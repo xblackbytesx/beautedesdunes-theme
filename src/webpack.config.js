@@ -27,10 +27,16 @@ module.exports = {
 			},
 			{
         test: /\.css$/,
-        use: [
-          'MiniCssExtractPlugin',
-					{ loader: 'css-loader', options: { importLoaders: 1 } },
-					'postcss-loader',
+				use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'production',
+            },
+          },
+					'style-loader',
+          'css-loader',
+          'postcss-loader',
         ],
       }
 		]
@@ -52,8 +58,8 @@ module.exports = {
 			prettyPrint: true
 		}),
 		new MiniCssExtractPlugin({
-			filename: '[name].css',
-			chunkFilename: '[id].css',
+			filename: 'css/[name].[hash].css',
+			chunkFilename: 'css/[id].[hash].css',
 		})
 	],
 	watchOptions: {}
