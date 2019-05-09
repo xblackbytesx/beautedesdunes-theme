@@ -34,7 +34,7 @@ module.exports = {
               hmr: process.env.NODE_ENV === 'production',
             },
           },
-					'style-loader',
+					// 'style-loader',
           'css-loader',
           'postcss-loader',
         ],
@@ -58,8 +58,8 @@ module.exports = {
 			prettyPrint: true
 		}),
 		new MiniCssExtractPlugin({
-			filename: 'css/[name].[hash].css',
-			chunkFilename: 'css/[id].[hash].css',
+			filename: 'css/[name].[contenthash].css',
+			chunkFilename: 'css/[id].[contenthash].css',
 		})
 	],
 	watchOptions: {}
