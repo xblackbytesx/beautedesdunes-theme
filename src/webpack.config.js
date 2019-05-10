@@ -53,8 +53,6 @@ module.exports = {
 
 	plugins: [
 		new AssetsPlugin({
-			filename: 'webpack_assets.json',
-			path: path.join(__dirname, '../data'),
 			prettyPrint: true
 		}),
 		new MiniCssExtractPlugin({
