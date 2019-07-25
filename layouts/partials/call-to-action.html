@@ -1,0 +1,12 @@
+{{ $icon_size := "32px" }}
+{{ with .Site.Params.cta_button_1 }}
+<button href="{{ .link }}" target="_blank" class="cta-button" title="{{ .name }}" aria-label="{{ .aria }}">
+  {{ partial "svg/gift.svg" (dict "size" $icon_size) }}
+</button>
+{{ end }}
+
+{{ with .Site.Params.cta_button_2 }}
+<button href="{{ .link }}" target="_blank" class="cta-button" title="{{ .name }}" aria-label="{{ .aria }}">
+  {{ partial "svg/gift.svg" (dict "size" $icon_size) }}
+</button>
+{{ end }}
