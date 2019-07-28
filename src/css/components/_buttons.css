@@ -1,3 +1,5 @@
 .cta-button {
-  background: none;
+  background-image: none;
+  background-color: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
 }
