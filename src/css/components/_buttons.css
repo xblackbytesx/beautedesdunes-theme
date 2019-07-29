@@ -1,14 +1,15 @@
 .cta-button {
-  background-image: none;
+  display: inline-block;
   background-color: var(--brand-primary);
   border: 1px solid var(--brand-primary);
   color: #FFF;
   font-weight: bold;
-  padding: .2rem 1rem;
+  padding: .5rem 1rem;
   margin-left: 1rem;
 }
 
 .button-group {
+  padding: 2rem 0;
   font-size: 2em;
 
   .cta-button:first-child {
