@@ -1,18 +1,33 @@
 .cta-button {
-  display: inline-block;
+  display: block;
   background-color: var(--brand-primary);
   border: 1px solid var(--brand-primary);
   color: #FFF;
   font-weight: bold;
-  padding: .5rem 1rem;
-  margin-left: 1rem;
+  padding: 1rem;
+  margin-top: var(--gutter);
+  text-align: center;
 }
 
 .button-group {
-  padding: 2rem 0;
+  padding: var(--gutter) 0;
   font-size: 2em;
 
   .cta-button:first-child {
-    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cta-button {
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+
+  .button-group {
+    .cta-button:first-child {
+      margin-left: 0;
+    }
   }
 }
